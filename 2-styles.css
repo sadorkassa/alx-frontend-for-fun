@@ -1,0 +1,84 @@
+ .toggle-cb {
+    display: none;
+    
+     }
+  
+  .toggle-cb + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 2px;
+    width: 150px;
+    height: 48px;
+    background-color: #c3c3c3;
+    border-radius: 60px;
+  }
+  
+  .toggle-cb + label::before, .toggle-cb + label::after {
+    display: block;
+    position: absolute;
+    top: 0.04rem;
+    left: 1.5px;
+    bottom: 1px;
+    height: 50px;
+    width: 98%;
+    overflow: hidden;
+  }
+  
+
+  
+  .toggle-cb + label::after {
+    position: absolute;
+    top: -15%;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 0.04rem solid #c3c3c3;
+    transition: margin 0.3s;
+    white-space: pre;
+    overflow: visible;
+    font-size: 0.5rem;
+    line-height: 0.5;
+    content: "";
+    color: #c6c6c6;
+    font-family: sans-serif;
+    margin-left: -5px;
+  }
+
+  .toggle-cb + label::before {
+    right: 1px;
+    background-color: #f1f1f1;
+    border-radius: 60px;
+    transition: background 0.3s;
+    white-space: pre;
+    line-height: 2;
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #c6c6c6;
+    content: "             No";
+  }
+  
+  input.toggle-cb:checked + label::before {
+    background-color: #D02C42;
+    white-space: pre;
+    font-size: 24px;
+    line-height: 2;
+    font-family: sans-serif;
+    color: #fff;
+    content: "     Yes";
+  }
+  
+  input.toggle-cb:checked + label::after {
+    margin-left: 90px;
+    content: "";
+  }
+
+  body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
